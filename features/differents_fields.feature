@@ -5,15 +5,15 @@ Feature: The form have differents fields to search
         Then I should see an input tag named "Name"
         And I should see an input tag named "Type"
         And I should see an input tag named "Designed by"
-        And I should see a checkbox named "Presition"
-        And I should see a checkbox named "match_all"
+        And I should see a checkbox named "Precision"
+        And I should see a checkbox named "Match all"
 
     Scenario: Match in different fields
         Given I visit the homepage
         When fill the input "Type" with "Scripting"
         When Searching "Scripting" by field "Type"
         And  Searching "Microsoft" by field "Designed by"
-        And  "match_all" is checked
+        And  "Match all" is checked
         Then All the divs with class result containt "Scripting"
         And All the divs with class result containt "Microsoft"
 

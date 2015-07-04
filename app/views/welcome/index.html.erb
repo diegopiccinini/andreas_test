@@ -1,8 +1,32 @@
-<h1>Welcome#index</h1>
+<h1>Search in Json File</h1>
 <%= form_tag(:search, remote: true) do %>
+<p>
+    <%= label_tag 'search' %>
     <%= search_field_tag 'search' %>
+</p>
+<p>
+    <%= label_tag 'name' %>
+    <%= text_field_tag 'Name' %>
+</p>
+<p>
+    <%= label_tag 'type' %>
+    <%= text_field_tag 'Type' %>
+</p>
+<p>
+    <%= label_tag 'Designed by' %>
+    <%= text_field_tag 'Designed by' %>
+</p>
+<p>
+    <%= label_tag 'Precision' %>
+    <%= check_box_tag 'Precision' %>
+</p>
+<p>
+    <%= label_tag 'Match all' %>
+    <%= check_box_tag 'Match all' %>
+</p>
+<p>
     <%= button_tag 'Go' %>
-
+</p>
 <% end %>
 
 <div id="results">
