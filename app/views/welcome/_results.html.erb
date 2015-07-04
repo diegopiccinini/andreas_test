@@ -1,0 +1,8 @@
+<h2>Results</h2>
+<% @results.each do |r| %>
+    <div class="result">
+        <div class="name"><%= r["Name"] %></div>
+        <div class="type"><%= r["Type"] %></div>
+        <div class="designed_by"><%= r["Designed by"] %></div>
+    </div>
+<% end %>

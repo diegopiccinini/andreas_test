@@ -1,11 +1,25 @@
 Given(/^I visit the homepage$/) do
-  pending # express the regexp above with the code you wish you had
+  visit "/"
 end
 
 Then(/^I should see an input tag named "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  expect(has_field?(arg1)).to be true
 end
 
 Then(/^I should see a button named "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+  expect(has_button?(arg1)).to be true
+end
+
+When(/^fill the input "(.*?)" with "(.*?)"$/) do |input_search, text|
+  fill_in input_search, :with => text
+end
+
+When(/^click on the button "(.*?)"$/) do |button_name|
+  click_button button_name
+end
+
+Then(/^All the divs with class result containt "(.*?)"$/) do |text|
+  assert_selector('.result', :count => 8)
+  assert_text(text, :count => 8)
+
 end

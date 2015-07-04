@@ -49,5 +49,6 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'cucumber'
   gem 'cucumber-rails', :require => false
+  gem 'rspec-expectations'
 end
 
