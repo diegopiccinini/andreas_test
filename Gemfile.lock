@@ -141,7 +141,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
-    search_json_data (0.1.0)
+    search_json_data (1.0.0)
     selenium-webdriver (2.46.2)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
@@ -194,7 +194,7 @@ DEPENDENCIES
   rails (= 4.2.0)
   rspec-expectations
   sass-rails (~> 5.0)
-  search_json_data
+  search_json_data (= 1.0.0)
   selenium-webdriver
   shoulda-matchers
   spring

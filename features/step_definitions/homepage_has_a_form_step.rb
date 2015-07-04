@@ -19,7 +19,11 @@ When(/^click on the button "(.*?)"$/) do |button_name|
 end
 
 Then(/^All the divs with class result containt "(.*?)"$/) do |text|
-  assert_selector('.result', :count => 8)
-  assert_text(text, :count => 8)
 
+    all('.result').each do |result|
+        within(result) do
+            assert_text(text)
+        end
+    end
 end
+

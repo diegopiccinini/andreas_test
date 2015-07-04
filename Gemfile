@@ -33,7 +33,7 @@ gem 'yard', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # Use search_json_data
-gem 'search_json_data'
+gem 'search_json_data', '1.0.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
