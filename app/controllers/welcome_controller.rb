@@ -9,7 +9,7 @@ class WelcomeController < ApplicationController
 
     @data = DataArray.new
     # the field search is a free text search in all fields, so there aren't conditions to exclude fields
-    @results = @data.search_by params["search"], nil, nil, precision
+    @results = @data.search_by params["search"], nil, nil, precision unless params["search"]==""
 
     # set all fields and get the result
     set_search_fields(["Name","Type","Designed by"], precision)
