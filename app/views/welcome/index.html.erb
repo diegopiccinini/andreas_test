@@ -4,6 +4,12 @@
         <div class="form-group">
             <%= label_tag 'search' , nil, class: 'sr-only' %>
             <%= search_field_tag 'search', nil, class: 'form-control', placeholder: 'Search' %>
+        <ul>
+            <li>Free text search type words, example: Lisp Common </li>
+            <li>For exactly matches use quotes, example: "Thomas Eugene"</li>
+            <li>For negative search use -, example: Microsoft -Apple. If you want not an array field, type for example: john -array</li>
+            <li>For Match in different fields use these Custom fields: </li>
+        </ul>
         </div>
         <div class="row">
             <hr />
@@ -21,6 +27,7 @@
                 Precision
                 </label>
             </div>
+            <p>check to add case sensitive</p>
         </div>
         <div class="form-group">
 
@@ -30,6 +37,7 @@
                 Match All
                 </label>
             </div>
+            <p>check if you want that results have all the fields together</p>
         </div>
         <div class="form-group">
 
