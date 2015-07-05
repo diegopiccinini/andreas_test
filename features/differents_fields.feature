@@ -11,7 +11,7 @@ Feature: The form have differents fields to search
     Scenario: Match in different fields
         Given I visit the homepage
         When fill the input "Type" with "Scripting"
-        When Searching "Scripting" by field "Type"
+        And Searching "Scripting" by field "Type"
         And  Searching "Microsoft" by field "Designed by"
         And  "Match all" is checked
         Then All the divs with class result containt "Scripting"

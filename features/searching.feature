@@ -7,7 +7,7 @@ Feature: Searching
         Then All the divs with class result containt "Common Lisp"
      Scenario: return a result
         Given I visit the homepage
-        When fill the input "search" with "Thomas Eugene"
+        When fill the input "search" with "\"Thomas Eugene\""
         And click on the button "Go"
         Then All the divs with class result containt "BASIC"
         But not "Haskell"
