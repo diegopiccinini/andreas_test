@@ -14,6 +14,7 @@ Feature: Searching
     Scenario: Return a result exluding negative expresion
         Given I visit the homepage
         When fill the input "search" with "john -array"
+        And the checkbox "Precision" is unchecked
         And click on the button "Go"
         Then which should match "BASIC", "Haskell", "Lisp" and "S-Lang"
         But not "Chapel", "Fortran" or "S".
