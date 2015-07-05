@@ -52,3 +52,5 @@ group :development, :test do
   gem 'rspec-expectations'
 end
 
+gem "less-rails"
+gem 'twitter-bootstrap-rails'

@@ -1,8 +1,24 @@
 <h2>Results</h2>
+
 <% @results.each do |r| %>
     <div class="result">
-        <div class="name"><%= r["Name"] %></div>
-        <div class="type"><%= r["Type"] %></div>
-        <div class="designed_by"><%= r["Designed by"] %></div>
+        <div class="row">
+            <div class="col-md-2"><h3>Name</h3></div>
+            <div class="col-md-6"><h4><%= r["Name"] %></h4></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><h3>Type</h3></div>
+            <div class="col-md-6"><h4><%= r["Type"] %></h4></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><h3>Designed by</h3></div>
+            <div class="col-md-6"><h4><%= r["Designed by"] %></h4></div>
+        </div>
+        <div class="row">
+                <hr />
+        </div>
     </div>
+<% end %>
+<% if @results.empty? %>
+    <p>there aren't results for this search</p>
 <% end %>
